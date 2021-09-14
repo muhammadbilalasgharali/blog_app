@@ -1,0 +1,22 @@
+<h1>Hello, Articles!</h1>
+
+<% @article.each do |t|%>
+<h3>
+<%= t.title%>
+</h3>
+<p>
+<%= t.body%>
+</p>
+<% end %>
+
+<%= link_to "New Article", new_article_path %>
+
+
+<ol>
+<% @article.each do |t|%>
+<li>
+<%= link_to t.title, t %>
+</li>
+<% end %>
+</ol>
+
